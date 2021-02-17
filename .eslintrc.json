@@ -1,0 +1,54 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "overrides": [
+        {
+          "files": ["**/**.ts", "**/**.tsx"],
+          "plugins": ["@typescript-eslint"],
+          "extends": [
+            "plugin:@typescript-eslint/recommended",
+            "plugin:import/typescript",
+            "prettier/@typescript-eslint"
+          ],
+          "parserOptions": {
+            "project": "./tsconfig.json"
+          },
+          "rules": {
+            "no-useless-constructor": "off",
+            "no-empty-function": "off",
+            "@typescript-eslint/no-empty-function": ["error"],
+            "@typescript-eslint/no-useless-constructor": "error",
+            "@typescript-eslint/consistent-type-assertions": "error",
+            "@typescript-eslint/dot-notation": "error",
+            "@typescript-eslint/member-ordering": "error",
+            "@typescript-eslint/no-extraneous-class": "error",
+            "@typescript-eslint/prefer-readonly": "error",
+            "@typescript-eslint/ban-ts-comment": ["error",{
+              "ts-ignore": "allow-with-description"
+            }],
+            "react/prop-types": "off"
+          }
+        }
+    ],
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+    }
+}
