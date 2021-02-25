@@ -32,6 +32,7 @@
             "no-useless-constructor": "off",
             "no-empty-function": "off",
             "@typescript-eslint/no-empty-function": ["error"],
+            "@typescript-eslint/no-debugger":"off",
             "@typescript-eslint/no-useless-constructor": "error",
             "@typescript-eslint/consistent-type-assertions": "error",
             "@typescript-eslint/dot-notation": "error",
@@ -50,5 +51,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+      "no-debugger":"off",
+      "prefer-const":"warn"
     }
 }
